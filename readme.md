@@ -5,7 +5,7 @@
 
 A vibrant, pixel-art **Flappy Bird clone** built with **Godot 4**. Navigate your plane through an endless gauntlet of pipes, rev your engine to defy gravity, and chase that elusive high score!
 
-![Gameplay Screenshot](Screenshots/gameplay.png)
+![Gameplay Screenshot](Screenshots/ejarao_tappy_plane.gif)
 
 ## Features
 
