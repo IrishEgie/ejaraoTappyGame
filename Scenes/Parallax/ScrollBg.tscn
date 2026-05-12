@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://xtiq1tlkdjrc"]
+
+[ext_resource type="Texture2D" uid="uid://0vbjeigxdcrg" path="res://Assets/background_pixel_art/Sky.png" id="1_4a7ol"]
+[ext_resource type="Texture2D" uid="uid://c1kpa8dnegpb3" path="res://Assets/background_pixel_art/Cloud 1.png" id="2_e8fxo"]
+[ext_resource type="Texture2D" uid="uid://rechhdpekdli" path="res://Assets/background_pixel_art/Cloud 2.png" id="3_qqhns"]
+[ext_resource type="Texture2D" uid="uid://dfptevckbbi6s" path="res://Assets/background_pixel_art/Rock 1.png" id="4_haocw"]
+[ext_resource type="Texture2D" uid="uid://b0n013hdphb3m" path="res://Assets/background_pixel_art/Rock 2.png" id="5_w2pf5"]
+
+[node name="ScrollBG" type="Node2D" unique_id=1924183381]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1714864215]
+scale = Vector2(7.4722223, 7.4722223)
+texture = ExtResource("1_4a7ol")
+centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1763105166]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="Cloud1" type="Sprite2D" parent="Parallax2D" unique_id=679265528]
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("2_e8fxo")
+centered = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=2112324089]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-20, 0)
+
+[node name="Cloud2" type="Sprite2D" parent="Parallax2D2" unique_id=977322069]
+scale = Vector2(7.486111, 7.486111)
+texture = ExtResource("3_qqhns")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1944703335]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3" unique_id=846665756]
+scale = Vector2(7.5902777, 7.5902777)
+texture = ExtResource("4_haocw")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=2133251670]
+repeat_size = Vector2(1920, 0)
+autoscroll = Vector2(-80, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D4" unique_id=1788756586]
+scale = Vector2(7.496094, 7.6597233)
+texture = ExtResource("5_w2pf5")
+centered = false

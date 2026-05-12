@@ -1,0 +1,5 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+TAPPY_01.zip
+Links.txt

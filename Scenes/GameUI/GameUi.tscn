@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c0odnw8wfqrrr"]
+
+[ext_resource type="FontFile" uid="uid://cneedlbnotp5q" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_81r78"]
+[ext_resource type="Script" uid="uid://bqe813vivp2x7" path="res://Scenes/GameUI/GameUi.gd" id="1_556m7"]
+[ext_resource type="LabelSettings" uid="uid://8ysbcxq4vd4o" path="res://Resource/RedLabel96.tres" id="2_556m7"]
+[ext_resource type="AudioStream" uid="uid://bp821cq4mc67q" path="res://Assets/audio/score.wav" id="4_jwnss"]
+[ext_resource type="AudioStream" uid="uid://wjnyhwhbyrd" path="res://Assets/audio/game_over.wav" id="5_33k4q"]
+[ext_resource type="AudioStream" uid="uid://c7wtkw7072dsu" path="res://Assets/audio/276362__n_audioman__crash04_hitsound.wav" id="6_33k4q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iq8cv"]
+font = ExtResource("1_81r78")
+font_size = 36
+font_color = Color(0.7529412, 0.78039217, 0.25490198, 1)
+outline_size = 10
+outline_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_556m7"]
+font = ExtResource("1_81r78")
+font_size = 36
+font_color = Color(0.12156863, 0.05490196, 0.10980392, 1)
+outline_size = 10
+outline_color = Color(0.9607843, 0.92941177, 0.7294118, 1)
+
+[node name="GameUI" type="Control" unique_id=1550091799]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_556m7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1296095036]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScoreLBL" type="Label" parent="MarginContainer" unique_id=1272879352]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "0000"
+label_settings = SubResource("LabelSettings_iq8cv")
+
+[node name="PressLBL" type="Label" parent="MarginContainer" unique_id=500223569]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Press Escape to Restart"
+label_settings = SubResource("LabelSettings_556m7")
+horizontal_alignment = 1
+
+[node name="GameOverLBL" type="Label" parent="MarginContainer" unique_id=839782134]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Game 
+Over"
+label_settings = ExtResource("2_556m7")
+horizontal_alignment = 1
+
+[node name="ScoreSound" type="AudioStreamPlayer" parent="." unique_id=76428702]
+stream = ExtResource("4_jwnss")
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=1770397338]
+stream = ExtResource("5_33k4q")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=1539328917]
+process_mode = 3
+stream = ExtResource("6_33k4q")
+volume_db = -6.0
